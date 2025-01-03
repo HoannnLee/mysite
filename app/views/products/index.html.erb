@@ -1,0 +1,15 @@
+<h1 class="products-title">Trái cây</h1>
+
+<%= link_to "Tạo sản phẩm", new_product_path, class: "create-button" %>
+
+
+<div id="products" class="products-container">
+  <% @products.each do |product| %>
+    <div class="product-card">
+      <a href="/products/<%= product.id %>" class="product-link">
+        <%= product.name %>
+      </a>
+    </div>
+  <% end %>
+</div>
+
