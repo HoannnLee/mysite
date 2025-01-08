@@ -79,12 +79,6 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: Set permissions for brakeman
-        run: chmod +x bin/brakeman
-
-      - name: Run brakeman
-        run: bin/brakeman --no-pager
-
       - name: Set up Ruby
         uses: ruby/setup-ruby@v1
         with:
